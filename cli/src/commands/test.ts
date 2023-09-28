@@ -10,6 +10,7 @@ export default {
             description: 'Create a build and then run e2e tests'
         }
     ],
+    
     handler: async ({build = false}, program: any) => {
         output.notice('Running test');
         await pnpm(build ? 'test:build' : 'test');
